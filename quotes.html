@@ -1,0 +1,113 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote</title>
+
+    <style>
+
+        .widget {
+            padding: 5px 5px ;
+            color: #000000;
+            text-align: center;
+                max-width: 95%;
+            margin: auto;
+            font-variant-caps: petite-caps;
+            font-size: 2em;
+
+        }
+
+        div {
+             width: 95%;
+             min-height: 100px;
+
+            background:
+                linear-gradient(to right, black 4px, transparent 4px) 0 0,
+                linear-gradient(to right, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to left, black 4px, transparent 4px) 100% 100%,
+                linear-gradient(to bottom, black 4px, transparent 4px) 0 0,
+                linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
+                linear-gradient(to top, black 4px, transparent 4px) 0 100%,
+                linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
+
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+}
+
+     
+    </style>
+</head>
+<body>
+
+    <div class="widget" id="widget"></div>
+
+
+<script>
+
+quotes=[
+"Then I realized that to be more alive, I had to be less afraid. So I did it. I lost my fear and gained my whole life",
+"If you want to know the truth of who you are, walk until not a person knows your name. Travel is the great leveler, the great teacher, bitter as medicine, crueler than mirror-glass. A long stretch of road will teach you more about yourself than a hundred years of quiet. – Patrick Rothfuss",
+"To see the world, things dangerous to come to, to see behind walls, draw closer, to find each other, and to feel. That is the purpose of life.",
+"Because in the end, you won’t remember the times you spent in the office or mowing your lawn. Climb that goddamn mountain. – Jack Kerouac",
+"Life is a succession of lessons which must be lived to be understood. -Ralph Waldo Emerson",
+"You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose. -Dr. Seuss",
+"Don't judge each day by the harvest you reap but by the seeds that you plant. -Robert Louis Stevenson",
+"All we have to decide is what to do with the time that is given us - Gandalf",
+"All things must pass",
+"You step into the Road, and if you don’t keep your feet, there is no knowing where you might be swept off to - J.R.R. Tolkien",
+"Deeds will not be less valiant because they are unpraised - Aragorn",
+"Not all those who wander are lost - Bilbo Baggins",
+"Don’t go on discussing what a good person should be. Just be one - Marcus Aurelis",
+"The happiness of your life depends upon the quality of your thoughts - Marcus Aurelius",
+"You have power over your mind – not outside events. Realize this, and you will find strength - Marcus Aurelius",
+"I had a dream when I was 22 that someday I would go to the region of ice and snow and go on and on till I came to one of the poles of the Earth ― Ernest Shackleton",
+"The safest way to try to get what you want is to try to deserve what you want. It's such a simple idea. It's the golden rule. You want to deliver to the world what you would buy if you were on the other end - Charlie Munger",
+"Easy decisions, hard life. Hard decisions, easy life - Jerzy Gregorek",
+"Give yourself time, gift yourself consistency - Anthony Bourdain",
+"Dulcius ex asperis",
+"Thinking: the talking of the soul with itself - Plato",
+"Per aspera ad astra",
+"I went to the woods because I wished to live deliberately; to front only the essential facts of life and see if I could not learn what it had to teach, and not, when I came to die, discover that I had not lived - Henry David Thoreau",
+"The World is wide and Life is short",
+"Each day is a small lifetime. Live a good life today - James Clear",
+"Learning, like success, is anything but a linear process",
+"I am in competition with no one. I have no desire to play the game of being better than anyone. I am simply trying to be better than the person I was yesterday.",
+"If you want to be interesting, you have to be interested.",
+"It's supposed to be hard. If it were easy, everyone would do it.",
+"Don’t worry if you’re not where you want to be yet. Great things take time. ",
+"If it's important you'll find a way. If it's not, you'll find an excuse.",
+"Most people overestimate what they can do in one year and underestimate what they can do in ten years.",
+"A goal without a plan is just a wish.",
+"change your 24 hours and you'll change your life",
+"Stop thinking you are not qualified, not fit, or not experienced enough,",
+"Growth takes place when you start doing stuff you are not qualified to do.",
+"Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.",
+"Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
+];
+
+const INTERVAL = 86400000;
+
+function dispalyQuote(){
+
+    document.getElementById('widget').innerHTML =quotes[0];
+    quotes.forEach((quote, i) => {
+        setTimeout(() => {
+            document.getElementById('widget').innerHTML =quote;
+        }, i * INTERVAL);  
+    });
+    }
+
+    function dispalyWidget() {
+        dispalyQuote();
+        setTimeout(dispalyWidget, quotes.length*INTERVAL);
+    }
+    dispalyWidget()
+
+</script>
+
+</body>
+</html>
