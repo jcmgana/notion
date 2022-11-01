@@ -90,7 +90,7 @@ quotes=[
 
 const INTERVAL = 86400000;
 
-function dispalyQuote(){
+function displayQuote(){
 
     document.getElementById('widget').innerHTML =quotes[0];
     quotes.forEach((quote, i) => {
@@ -100,11 +100,11 @@ function dispalyQuote(){
     });
     }
 
-    function dispalyWidget() {
-        dispalyQuote();
-        setTimeout(dispalyWidget, quotes.length*INTERVAL);
+    function displayWidget() {
+        displayQuote();
+        setTimeout(displayWidget, quotes.length*INTERVAL);
     }
-    dispalyWidget()
+    displayWidget()
 
 </script>
 
