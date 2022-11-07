@@ -40,7 +40,7 @@ body{
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
-    var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
+    var date = today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
 
     var greet;
 
@@ -52,6 +52,6 @@ body{
         greet = 'Buonanotte  ';
 
     document.getElementById('lbl').innerHTML =
-        greet+= "Joaquín" + `<div id="date"> Hoy  ${date}</div>`;
+        greet+= "Joaquín" + `<div id="date"> Hoy  ${date}</div>` + `<div id="dayOfWeek"> toca  ${dayOfWeek}</div>`;
 </script> 
 </html>
