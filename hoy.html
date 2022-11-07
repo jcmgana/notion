@@ -36,11 +36,20 @@ body{
     weekday[5] = "Pullups 3x50, Squats 2x30. Correr 18:30";
     weekday[6] = "Glute bridges 3x50, Twists 3x60s ambos lados";
 
+    var trek    = new Array(7);
+    trek[0] = "Walk to Mordor";
+    trek[1] = "Correr 19:30";
+    trek[2] = "Walk to Mordor";
+    trek[3] = "Walk to Mordor";
+    trek[4] = "Walk to Mordor";
+    trek[5] = "Correr 18:30";
+    trek[6] = "Walk to Mordor";
     
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
     var date = today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
+    var trekk = trek[today.getDay()];
 
     var greet;
 
@@ -52,6 +61,7 @@ body{
         greet = 'Buonanotte  ';
 
     document.getElementById('lbl').innerHTML =
-        greet+= "Joaquín" + `<div id="date"> Hoy  ${date}</div>` + `<div id="dayOfWeek">${dayOfWeek}</div>`;
+        greet+= "Joaquín" + `<div id="date"> Hoy  ${date}</div>` + `<div id="dayOfWeek">${dayOfWeek}</div>` + 
+                `<div id="trekk">${trekk}</div>`;
 </script> 
 </html>
