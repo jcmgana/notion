@@ -29,13 +29,22 @@ body{
 <script>
     var weekday = new Array(7);
     weekday[0] = "Reposo";
-    weekday[1] = "BW Pushups 3x25, Leg Raises 2x20. Correr 19:30";
-    weekday[2] = "Pullups 3x50, Squats 2x30. Yoga 15:00";
+    weekday[1] = "BW Pushups 3x25, Leg Raises 2x20.";
+    weekday[2] = "Pullups 3x50, Squats 2x30.";
     weekday[3] = "Glute bridges 3x50, Twists each side 30 sec";
-    weekday[4] = "Pushups 3x25, Leg Raises 2x20. Yoga 15:00";
-    weekday[5] = "Pullups 3x50, Squats 2x30. Correr 18:30";
+    weekday[4] = "Pushups 3x25, Leg Raises 2x20.";
+    weekday[5] = "Pullups 3x50, Squats 2x30.";
     weekday[6] = "Glute bridges 3x50, Twists 3x60s ambos lados";
 
+    var yoga    = new Array(7);
+    yoga[0] = "Saddhana";
+    yoga[1] = "Yoga 15:00";
+    yoga[2] = "Saddhana";
+    yoga[3] = "Saddhana";
+    yoga[4] = "Yoga 15:00";
+    yoga[5] = "Saddhana";
+    yoga[6] = "Saddhana";
+    
     var trek    = new Array(7);
     trek[0] = "Walk to Mordor";
     trek[1] = "Correr 19:30";
@@ -50,6 +59,7 @@ body{
     var dayOfWeek = weekday[today.getDay()];
     var date = today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
     var trekk = trek[today.getDay()];
+    var yogaa = yoga[today.getDay()]
 
     var greet;
 
@@ -62,6 +72,7 @@ body{
 
     document.getElementById('lbl').innerHTML =
         greet+= "Joaquín" + `<div id="date"> Hoy  ${date}</div>` + `<div id="dayOfWeek">${dayOfWeek}</div>` + 
-                `<div id="trekk">${trekk}</div>`;
+                        `<div id="yogaa">${yogaa}</div>` +
+                        `<div id="trekk">${trekk}</div>`;
 </script> 
 </html>
