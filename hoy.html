@@ -28,13 +28,22 @@ body{
 
 <script>
     var weekday = new Array(7);
-    weekday[0] = "Reposo";
-    weekday[1] = "BW Pushups 3x25, Leg Raises 2x20.";
-    weekday[2] = "Pullups 3x50, Squats 2x30.";
-    weekday[3] = "Glute bridges 3x50, Twists each side 30 sec";
-    weekday[4] = "Pushups 3x25, Leg Raises 2x20.";
-    weekday[5] = "Pullups 3x50, Squats 2x30.";
-    weekday[6] = "Glute bridges 3x50, Twists 3x60s ambos lados";
+    weekday[0] = "Domingo";
+    weekday[1] = "Lunes";
+    weekday[2] = "Martes";
+    weekday[3] = "Miércoles";
+    weekday[4] = "Jueves";
+    weekday[5] = "Viernes";
+    weekday[6] = "Sábado";
+    
+    var bw = new Array(7);
+    bw[0] = "Reposo";
+    bw[1] = "BW Pushups 3x25, Leg Raises 2x20.";
+    bw[2] = "Pullups 3x50, Squats 2x30.";
+    bw[3] = "Glute bridges 3x50, Twists each side 30 sec";
+    bw[4] = "Pushups 3x25, Leg Raises 2x20.";
+    bw[5] = "Pullups 3x50, Squats 2x30.";
+    bw[6] = "Glute bridges 3x50, Twists 3x60s ambos lados";
 
     var yoga    = new Array(7);
     yoga[0] = "Saddhana";
@@ -56,10 +65,13 @@ body{
     
     var today = new Date();
     var hrs = today.getHours();
+    var bww = bw[today.getDay()];
     var dayOfWeek = weekday[today.getDay()];
-    var date = today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
+    var date =  dayOfWeek+" " +today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
     var trekk = trek[today.getDay()];
     var yogaa = yoga[today.getDay()]
+    
+    
 
     var greet;
 
@@ -72,7 +84,7 @@ body{
 
     document.getElementById('lbl').innerHTML =
         greet+= "Joaquín" + `<div id="date"> Hoy  ${date} toca </div>` +
-                        `<div id="dayOfWeek">${dayOfWeek}</div>` + 
+                        `<div id="dayOfWeek">${bw}</div>` + 
                         `<div id="yogaa">${yogaa}</div>` +
                         `<div id="trekk">${trekk}</div>`;
 </script> 
