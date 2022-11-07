@@ -1,0 +1,61 @@
+<html> 
+<head>
+    <title>Greeting Message</title> 
+    <style>
+#lbl {
+    font-family: monospace;
+    font-size: xx-large;
+    color: #626262;
+    padding: 5px;
+    border: 1px solid #ececec;
+    text-align: center;
+    line-height: 1.5;
+    height:85%
+
+
+}
+#date{
+    font-size:large;
+}
+body{
+    background-color: aliceblue;
+}
+    </style>
+</head>
+<body>
+    <div id="lbl"></div>
+</body>
+
+<script>
+    var weekday = new Array(7);
+    weekday[0] = "Reposo";
+    weekday[1] = "BW Pushups 3x25, Leg Raises 2x20
+    Correr 19:30";
+    weekday[2] = "Pullups 3x50, Squats 2x30.
+    Yoga 15:00";
+    weekday[3] = "Glute bridges 3x50, Twists each side 30 sec";
+    weekday[4] = "Pushups 3x25, Leg Raises 2x20
+    Yoga 15:00";
+    weekday[5] = "Pullups 3x50, Squats 2x30
+    Correr 18:30";
+    weekday[6] = "Glute bridges 3x50, Twists 3x60s ambos lados";
+
+    
+    var today = new Date();
+    var hrs = today.getHours();
+    var dayOfWeek = weekday[today.getDay()];
+    var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
+
+    var greet;
+
+    if (hrs < 12)
+        greet = 'Buongiorno  ';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Buonasera ';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Buonanotte  ';
+
+    document.getElementById('lbl').innerHTML =
+        greet+= "Joaquín" + `<div id="date"> Hoy  ${date}</div>`;
+</script> 
+</html>
